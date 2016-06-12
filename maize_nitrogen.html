@@ -11751,7 +11751,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Analysis-of-maize-RNA-seq-under-different-nitrogen-conditions-and-different-developmental-stages">Analysis of maize RNA-seq under different nitrogen conditions and different developmental stages<a class="anchor-link" href="#Analysis-of-maize-RNA-seq-under-different-nitrogen-conditions-and-different-developmental-stages">&#182;</a></h1>
+<h1 id="RNA-seq-analysis-reveals-nitrogen-starvation-affect-maize-ear-kernel-development">RNA-seq analysis reveals nitrogen-starvation affect maize ear kernel development<a class="anchor-link" href="#RNA-seq-analysis-reveals-nitrogen-starvation-affect-maize-ear-kernel-development">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11759,8 +11759,17 @@ div#notebook {
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="To-explore-nitrogen-effects-on-maize-ear-development,-we-compared-gene-and-lncRNA-expression-under-different-developmental-stages-and-nitrogen-conditions.-Fisrtly,-we-collected-ear1-and-ear2-sample-in-different-maize-developmental-stage.-Secondly,-for-each-stage,-we-treated-samples-with-normal-nitrogen-and-low-nitrogen-conditions.-Thirdly,-we-sequenced-samples-in-different-developmental-stages-with-different-conditions.-Forthly,-we-carried-out-RNA-seq-gene-differential-expression-analysis-on-these-datasets.-Fifthly,-we-identified-and-characterized-lncRNAs-in-maize.">To explore nitrogen effects on maize ear development, we compared gene and lncRNA expression under different developmental stages and nitrogen conditions. Fisrtly, we collected ear1 and ear2 sample in different maize developmental stage. Secondly, for each stage, we treated samples with normal nitrogen and low nitrogen conditions. Thirdly, we sequenced samples in different developmental stages with different conditions. Forthly, we carried out RNA-seq gene differential expression analysis on these datasets. Fifthly, we identified and characterized lncRNAs in maize.<a class="anchor-link" href="#To-explore-nitrogen-effects-on-maize-ear-development,-we-compared-gene-and-lncRNA-expression-under-different-developmental-stages-and-nitrogen-conditions.-Fisrtly,-we-collected-ear1-and-ear2-sample-in-different-maize-developmental-stage.-Secondly,-for-each-stage,-we-treated-samples-with-normal-nitrogen-and-low-nitrogen-conditions.-Thirdly,-we-sequenced-samples-in-different-developmental-stages-with-different-conditions.-Forthly,-we-carried-out-RNA-seq-gene-differential-expression-analysis-on-these-datasets.-Fifthly,-we-identified-and-characterized-lncRNAs-in-maize.">&#182;</a></h5>
+<div class="text_cell_render border-box-sizing rendered_html" style="overflow:auto !important;">
+<h4 id="Abstract:-Maize-ear-development-is-important-for-maize-growth.-It-was-found-that-the-development-can-be-affected-by-nitrogen-starvation-in-the-field.-To-study-its-molecular-mechanism,-we-analyzed-RNA-seq-data-of-maize-ear-in-normal-and-low-nitrogen-condition-in-different-developmental-stages-(ear1-and-ear2).-Through-differential-expression-(DE)-analysis-with-edgeR,-over-5,000-genes-are-found-to-be-differentially-expressed-under-nitrogen-treatments-in-ear2-stage-and-over-7,000-genes-are-found-to-be-differentially-expressed-between-ear1-and-ear2-stage-under-low-nitrogen-treatment.-We-annotated-these-DE-genes-with-TopGO-and-Mapman-and-found-that-these-genes-are-enriched-in-plant-growth-and-development-pathways.-Using-TPLA-lncRNA-identification-pipeline,-we-identified-7,152-lncRNAs-in-maize-samples.-Through-lncRNA-DE-analysis-with-Cuffdiff,-over-500-and-400-lncRNAs-are-found-to-be-differentially-expressed-under-nitrogen-treatments-and-different-developmental-stages-respectively.-This-study-showed-that-low-nitrogen-in-maize-affects-the-expression-level-of-genes-and-lncRNAs-related-to-plant-development.">Abstract: Maize ear development is important for maize growth. It was found that the development can be affected by nitrogen-starvation in the field. To study its molecular mechanism, we analyzed RNA-seq data of maize ear in normal and low nitrogen condition in different developmental stages (ear1 and ear2). Through differential expression (DE) analysis with edgeR, over 5,000 genes are found to be differentially expressed under nitrogen treatments in ear2 stage and over 7,000 genes are found to be differentially expressed between ear1 and ear2 stage under low nitrogen treatment. We annotated these DE genes with TopGO and Mapman and found that these genes are enriched in plant growth and development pathways. Using TPLA lncRNA identification pipeline, we identified 7,152 lncRNAs in maize samples. Through lncRNA DE analysis with Cuffdiff, over 500 and 400 lncRNAs are found to be differentially expressed under nitrogen treatments and different developmental stages respectively. This study showed that low nitrogen in maize affects the expression level of genes and lncRNAs related to plant development.<a class="anchor-link" href="#Abstract:-Maize-ear-development-is-important-for-maize-growth.-It-was-found-that-the-development-can-be-affected-by-nitrogen-starvation-in-the-field.-To-study-its-molecular-mechanism,-we-analyzed-RNA-seq-data-of-maize-ear-in-normal-and-low-nitrogen-condition-in-different-developmental-stages-(ear1-and-ear2).-Through-differential-expression-(DE)-analysis-with-edgeR,-over-5,000-genes-are-found-to-be-differentially-expressed-under-nitrogen-treatments-in-ear2-stage-and-over-7,000-genes-are-found-to-be-differentially-expressed-between-ear1-and-ear2-stage-under-low-nitrogen-treatment.-We-annotated-these-DE-genes-with-TopGO-and-Mapman-and-found-that-these-genes-are-enriched-in-plant-growth-and-development-pathways.-Using-TPLA-lncRNA-identification-pipeline,-we-identified-7,152-lncRNAs-in-maize-samples.-Through-lncRNA-DE-analysis-with-Cuffdiff,-over-500-and-400-lncRNAs-are-found-to-be-differentially-expressed-under-nitrogen-treatments-and-different-developmental-stages-respectively.-This-study-showed-that-low-nitrogen-in-maize-affects-the-expression-level-of-genes-and-lncRNAs-related-to-plant-development.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html" style="overflow:auto !important;">
+<h4 id="Pipeline:-Fisrtly,-we-carried-out-RNA-seq-gene-differential-expression-analysis-on-maize-ear-datasets-under-both-different-developmental-stages-and-nitrogen-conditions.-Secondly,-we-identified-lncRNAs-in-maize-ear-and-characterized-lncRNAs-under-both-different-developmental-stages-and-nitrogen-conditions.">Pipeline: Fisrtly, we carried out RNA-seq gene differential expression analysis on maize ear datasets under both different developmental stages and nitrogen conditions. Secondly, we identified lncRNAs in maize ear and characterized lncRNAs under both different developmental stages and nitrogen conditions.<a class="anchor-link" href="#Pipeline:-Fisrtly,-we-carried-out-RNA-seq-gene-differential-expression-analysis-on-maize-ear-datasets-under-both-different-developmental-stages-and-nitrogen-conditions.-Secondly,-we-identified-lncRNAs-in-maize-ear-and-characterized-lncRNAs-under-both-different-developmental-stages-and-nitrogen-conditions.">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -11803,7 +11812,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h6 id="Reads-statistics">Reads statistics<a class="anchor-link" href="#Reads-statistics">&#182;</a></h6>
+<h6 id="Reads-statistics.">Reads statistics.<a class="anchor-link" href="#Reads-statistics.">&#182;</a></h6>
 </div>
 </div>
 </div>
@@ -11856,7 +11865,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2.-Since-one-replicate-is-not-good-in-ear1,-so-we-also-analyzed-with-2-replicates">2. Since one replicate is not good in ear1, so we also analyzed with 2 replicates<a class="anchor-link" href="#2.-Since-one-replicate-is-not-good-in-ear1,-so-we-also-analyzed-with-2-replicates">&#182;</a></h4>
+<h4 id="2.-Since-one-replicate-is-not-good-in-ear1,-so-we-also-analyzed-with-2-replicates.">2. Since one replicate is not good in ear1, so we also analyzed with 2 replicates.<a class="anchor-link" href="#2.-Since-one-replicate-is-not-good-in-ear1,-so-we-also-analyzed-with-2-replicates.">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -11878,7 +11887,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Thirdly,-we-performed-GO-annotation-analysis-with-topgo-package-to-identify-function-of-DE-genes">Thirdly, we performed GO annotation analysis with topgo package to identify function of DE genes<a class="anchor-link" href="#Thirdly,-we-performed-GO-annotation-analysis-with-topgo-package-to-identify-function-of-DE-genes">&#182;</a></h3>
+<h3 id="Thirdly,-we-performed-GO-annotation-analysis-with-topgo-package-to-identify-function-of-DE-genes.">Thirdly, we performed GO annotation analysis with topgo package to identify function of DE genes.<a class="anchor-link" href="#Thirdly,-we-performed-GO-annotation-analysis-with-topgo-package-to-identify-function-of-DE-genes.">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11901,7 +11910,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Forthly,-we-identified-pathways-that-DE-genes-involved-with-mapman">Forthly, we identified pathways that DE genes involved with mapman<a class="anchor-link" href="#Forthly,-we-identified-pathways-that-DE-genes-involved-with-mapman">&#182;</a></h3>
+<h3 id="Forthly,-we-identified-pathways-that-DE-genes-involved-with-mapman.">Forthly, we identified pathways that DE genes involved with mapman.<a class="anchor-link" href="#Forthly,-we-identified-pathways-that-DE-genes-involved-with-mapman.">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11923,7 +11932,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Part-two.-We-identified-lncRNAs-in-maize-and-found-differentially-expressed-lncRNAs-both-between-developmental-stages-and-between-nitrogen-conditions.">Part two. We identified lncRNAs in maize and found differentially expressed lncRNAs both between developmental stages and between nitrogen conditions.<a class="anchor-link" href="#Part-two.-We-identified-lncRNAs-in-maize-and-found-differentially-expressed-lncRNAs-both-between-developmental-stages-and-between-nitrogen-conditions.">&#182;</a></h2>
+<h2 id="Part-two.-We-identified-lncRNAs-in-maize-and-characterized-lncRNAs-under-both-different-developmental-stages-and-nitrogen-treatments.">Part two. We identified lncRNAs in maize and characterized lncRNAs under both different developmental stages and nitrogen treatments.<a class="anchor-link" href="#Part-two.-We-identified-lncRNAs-in-maize-and-characterized-lncRNAs-under-both-different-developmental-stages-and-nitrogen-treatments.">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11932,7 +11941,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Firstly,-we-identified-lncRNAs-in-maize-with-the-pipeline-of-TPLA">Firstly, we identified lncRNAs in maize with the pipeline of TPLA<a class="anchor-link" href="#Firstly,-we-identified-lncRNAs-in-maize-with-the-pipeline-of-TPLA">&#182;</a></h3>
+<h3 id="Firstly,-we-identified-lncRNAs-in-maize-with-the-pipeline-of-TPLA.">Firstly, we identified lncRNAs in maize with the pipeline of TPLA.<a class="anchor-link" href="#Firstly,-we-identified-lncRNAs-in-maize-with-the-pipeline-of-TPLA.">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11961,7 +11970,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Secondly,-we-performed-lncRNA-differentially-expression-analysis-with-cuffdiff-and-cummerRbund">Secondly, we performed lncRNA differentially expression analysis with cuffdiff and cummerRbund<a class="anchor-link" href="#Secondly,-we-performed-lncRNA-differentially-expression-analysis-with-cuffdiff-and-cummerRbund">&#182;</a></h3>
+<h3 id="Secondly,-we-performed-lncRNA-differentially-expression-analysis-with-cuffdiff-and-cummerRbund.">Secondly, we performed lncRNA differentially expression analysis with cuffdiff and cummerRbund.<a class="anchor-link" href="#Secondly,-we-performed-lncRNA-differentially-expression-analysis-with-cuffdiff-and-cummerRbund.">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11983,7 +11992,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Thirdly,-we-performed-mirna-target-and-mimic-analysis-to-further-explore-lncRNA-function">Thirdly, we performed mirna target and mimic analysis to further explore lncRNA function<a class="anchor-link" href="#Thirdly,-we-performed-mirna-target-and-mimic-analysis-to-further-explore-lncRNA-function">&#182;</a></h3>
+<h3 id="Thirdly,-we-performed-mirna-target-and-mimic-analysis-to-further-explore-lncRNA-function.">Thirdly, we performed mirna target and mimic analysis to further explore lncRNA function.<a class="anchor-link" href="#Thirdly,-we-performed-mirna-target-and-mimic-analysis-to-further-explore-lncRNA-function.">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12000,6 +12009,15 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Notice:-our-partner-is-responsible-for-the-sample-preparation,-RNA-sequencing-and-following-experimental-validation.">Notice: our partner is responsible for the sample preparation, RNA sequencing and following experimental validation.<a class="anchor-link" href="#Notice:-our-partner-is-responsible-for-the-sample-preparation,-RNA-sequencing-and-following-experimental-validation.">&#182;</a></h3>
+</div>
+</div>
 </div>
     </div>
   </div>
