@@ -11757,7 +11757,12 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Abstract: Maize ear development is important for maize growth. It was found that the development can be affected by nitrogen-starvation in the field. To study its molecular mechanism, we analyzed RNA-seq data of maize ear in normal and low nitrogen condition in different developmental stages (ear1 and ear2). Through differential expression (DE) analysis with edgeR, over 5,000 genes are found to be differentially expressed under nitrogen treatments in ear2 stage and over 8,000 genes are found to be differentially expressed (DE) between ear1 and ear2 stage under low nitrogen treatment. We annotated these DE genes with TopGO and Mapman and found that these genes are enriched in plant growth and development pathways. Moreover, DE genes specific for one condition is extracted and their involved pathways are explored. Nitrogen cis-acting elements containing genes are also analyzed for functional annotation. Using lncRNA identification pipeline, we identified 7,152 lncRNAs in maize samples. Through lncRNA DE analysis with Cuffdiff, over 500 and 400 lncRNAs are found to be differentially expressed under nitrogen treatments and different developmental stages respectively. This study showed that low nitrogen in maize affects the expression level of genes and lncRNAs related to cell development pathways.</p>
+<p>Abstract: Maize ear development is important for maize growth. It was found that the development can be affected by nitrogen-starvation in the field. To study its molecular mechanism, we analyzed RNA-seq data of maize ear in normal and low nitrogen condition in different developmental stages (ear1 and ear2). Through differential expression (DE) analysis with edgeR, over 5,000 genes are found to be differentially expressed under nitrogen treatments in ear2 stage and over 8,000 genes are found to be differentially expressed (DE) between ear1 and ear2 stage under low nitrogen treatment. We annotated these DE genes with TopGO and Mapman and found that these genes are enriched in plant growth and development pathways. Moreover, DE genes specific for one condition is extracted and their involved pathways are explored. Nitrogen cis-acting elements containing genes are also analyzed for functional annotation. Using lncRNA identification pipeline, we identified 7,152 lncRNAs in maize samples. Through lncRNA DE analysis with Cuffdiff, over 500 and 400 lncRNAs are found to be differentially expressed under nitrogen treatments and different developmental stages respectively. This study showed</p>
+<ol>
+<li>Asynchronism of the development of  NO.1 and NO.2 ear sinks</li>
+<li>Low nitrogen had comprehensive influences on gene expression in NO.2 ear and  NO.2 ear dominated the response of the low nitrogen at one week after silking stage.</li>
+<li>NRE-mediated nitrate-inducible gene expression  in maize ear through its broad effects on various cellular functions to response to nitrate signaling.</li>
+</ol>
 
 </div>
 </div>
@@ -11786,6 +11791,17 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig1.png?raw=true" style="height: 300px;" />
+Figure 1. Pipeline of differentially expressed genes identification.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.-We-cleaned-the-reads-with-SolexaQA-and-Cutadapter,-mapped-reads-to-the-maize-genome-(AGPv3.28)-with-tophat,-calculated-reads-counts-with-htseq-count.">1. We cleaned the reads with SolexaQA and Cutadapter, mapped reads to the maize genome (AGPv3.28) with tophat, calculated reads counts with htseq-count.<a class="anchor-link" href="#1.-We-cleaned-the-reads-with-SolexaQA-and-Cutadapter,-mapped-reads-to-the-maize-genome-(AGPv3.28)-with-tophat,-calculated-reads-counts-with-htseq-count.">&#182;</a></h3>
 </div>
 </div>
@@ -11798,17 +11814,6 @@ div#notebook {
 <div class="highlight"><pre>qsub -t 1-3 /psc/bioinformatics/sunyd/lixuexian/script/assemble_pair.sh /psc/bioinformatics/sunyd/genome/zea_mays/zma_AGPv3.28.gtf /psc/bioinformatics/sunyd/genome/zea_mays/zma_AGPv3.28 /psc/bioinformatics/sunyd/lixuexian/data/ 1_CK_
 qsub -t 1-3 /psc/bioinformatics/sunyd/lixuexian/script/assemble_pair.sh /psc/bioinformatics/sunyd/genome/zea_mays/zma_AGPv3.28.gtf /psc/bioinformatics/sunyd/genome/zea_mays/zma_AGPv3.28 /psc/bioinformatics/sunyd/lixuexian/data/ 1_LN_
 </pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig1.png?raw=true" style="height: 300px;" />
-Figure 1. Pipeline of differentially expressed genes.</p>
 
 </div>
 </div>
@@ -11935,7 +11940,7 @@ Figure 2. PCA analysis of RNA-seq samples.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Part-Two.-Functional-analysis-of-differentially-expressed-genes-in-each-comparison.">Part Two. Functional analysis of differentially expressed genes in each comparison.<a class="anchor-link" href="#Part-Two.-Functional-analysis-of-differentially-expressed-genes-in-each-comparison.">&#182;</a></h2>
+<h2 id="Part-Two.-Functional-analysis-of-differential-expressed-genes-in-each-comparison.">Part Two. Functional analysis of differential expressed genes in each comparison.<a class="anchor-link" href="#Part-Two.-Functional-analysis-of-differential-expressed-genes-in-each-comparison.">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11944,7 +11949,27 @@ Figure 2. PCA analysis of RNA-seq samples.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.-We-identified-DE-genes-involved-pathways-with-Mapman.">1. We identified DE genes involved pathways with Mapman.<a class="anchor-link" href="#1.-We-identified-DE-genes-involved-pathways-with-Mapman.">&#182;</a></h3>
+<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig3.png?raw=true" style="height: 300px;" />
+Figure 3. Pipeline of annotating differentially expressed genes.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.-Ear1_CK:Ear2_CK-comparison">1. Ear1_CK:Ear2_CK comparison<a class="anchor-link" href="#1.-Ear1_CK:Ear2_CK-comparison">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="1)-Functional-category-enrichment-of-DE-genes-with-Mapman.">1) Functional category enrichment of DE genes with Mapman.<a class="anchor-link" href="#1)-Functional-category-enrichment-of-DE-genes-with-Mapman.">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -11954,39 +11979,8 @@ Figure 2. PCA analysis of RNA-seq samples.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span class="k">for </span>i in *.fdr5.txt; <span class="k">do </span><span class="nv">j</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$i</span> |sed <span class="s1">&#39;s/fdr5/fdr5.mapman/g&#39;</span><span class="sb">`</span>; cut -f1,2 <span class="nv">$i</span> |sed <span class="s1">&#39;1d&#39;</span> &gt; <span class="nv">$j</span>; <span class="k">done</span>    <span class="c">####only keep name and fold change</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig3.png?raw=true" style="height: 700px;" />
-Figure 3. Ear1_LN:Ear2_LN differentially expressed genes involved pathways.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.-Functional-category-enrichment-of-DE-genes-in-Ear1CK:Ear2CK-and-Ear2CK:Ear2LN.">2. Functional category enrichment of DE genes in Ear1CK:Ear2CK and Ear2CK:Ear2LN.<a class="anchor-link" href="#2.-Functional-category-enrichment-of-DE-genes-in-Ear1CK:Ear2CK-and-Ear2CK:Ear2LN.">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre>bash /psc/home/ydsun/lixuexian/script/de_updown.sh /psc/home/ydsun/lixuexian/process
+bash /psc/home/ydsun/lixuexian/script/de_updown.sh /psc/home/ydsun/lixuexian/process
 bash /psc/home/ydsun/lixuexian/script/category_enrich.sh /psc/home/ydsun/lixuexian/process/topgo
-bash /psc/home/ydsun/lixuexian/script/category_detail.sh /psc/home/ydsun/lixuexian/process/topgo
 </pre></div>
 
 </div>
@@ -11997,8 +11991,8 @@ bash /psc/home/ydsun/lixuexian/script/category_detail.sh /psc/home/ydsun/lixuexi
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig3_2.png?raw=true" style="width: 800px;" />
-Figure 4. Functional category enrichment of Ear1_CK:Ear2_CK and Ear2_CK:Ear2_LN comparison.</p>
+<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig4.png?raw=true" style="width: 800px;" />
+Figure 4. Functional category enrichment of DE genes in Ear1_CK:Ear2_CK.</p>
 
 </div>
 </div>
@@ -12008,7 +12002,87 @@ Figure 4. Functional category enrichment of Ear1_CK:Ear2_CK and Ear2_CK:Ear2_LN 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.-Ear1LN:Ear2LN-specificially-expressed-genes-identification.">3. Ear1LN:Ear2LN specificially expressed genes identification.<a class="anchor-link" href="#3.-Ear1LN:Ear2LN-specificially-expressed-genes-identification.">&#182;</a></h3>
+<div class="highlight"><pre>bash /psc/home/ydsun/lixuexian/script/category_detail.sh /psc/home/ydsun/lixuexian/process/topgo
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig5.png?raw=true" style="width: 800px;" />
+Figure 5. Functional category enrichment genes in Ear1_CK:Ear2_CK.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2)-GO-enrichment-analysis-of-Ear1CK:Ear2CK-differentially-expressed-genes-with-topgo-package.">2) GO enrichment analysis of Ear1CK:Ear2CK differentially expressed genes with topgo package.<a class="anchor-link" href="#2)-GO-enrichment-analysis-of-Ear1CK:Ear2CK-differentially-expressed-genes-with-topgo-package.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig6.png?raw=true" style="width: 800px;" />
+Figure 5. GO enrichment of differentially expressed genes in Ear1_CK:Ear2_CK.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.-Ear2_CK:Ear2_LN-comparison">2. Ear2_CK:Ear2_LN comparison<a class="anchor-link" href="#2.-Ear2_CK:Ear2_LN-comparison">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="1)-Functional-category-enrichment-of-DE-genes-in-Ear2CK:Ear2LN.">1) Functional category enrichment of DE genes in Ear2CK:Ear2LN.<a class="anchor-link" href="#1)-Functional-category-enrichment-of-DE-genes-in-Ear2CK:Ear2LN.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig7.png?raw=true" style="width: 800px;" />
+Figure 7. Functional category enrichment of Ear2_CK:Ear2_LN comparison.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.-Ear1LN:Ear2LN-specificially-expressed-genes.">3. Ear1LN:Ear2LN specificially expressed genes.<a class="anchor-link" href="#3.-Ear1LN:Ear2LN-specificially-expressed-genes.">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="1)-Ear1LN:Ear2LN-specificially-expressed-genes-identification.">1) Ear1LN:Ear2LN specificially expressed genes identification.<a class="anchor-link" href="#1)-Ear1LN:Ear2LN-specificially-expressed-genes-identification.">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -12028,8 +12102,8 @@ Figure 4. Functional category enrichment of Ear1_CK:Ear2_CK and Ear2_CK:Ear2_LN 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig4.png?raw=true" style="width: 800px;" />
-Figure 5.  Ear1LN:Ear2LN specificially expressed genes identification.</p>
+<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig8.png?raw=true" style="width: 800px;" />
+Figure 8.  Ear1LN:Ear2LN specificially expressed genes identification.</p>
 
 </div>
 </div>
@@ -12039,7 +12113,7 @@ Figure 5.  Ear1LN:Ear2LN specificially expressed genes identification.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.-Functional-catergory-enrichment-of-Ear1LN:Ear2LN-specificially-expressed-genes.">3. Functional catergory enrichment of Ear1LN:Ear2LN specificially expressed genes.<a class="anchor-link" href="#3.-Functional-catergory-enrichment-of-Ear1LN:Ear2LN-specificially-expressed-genes.">&#182;</a></h3>
+<h4 id="2)-Functional-catergory-enrichment-of-Ear1LN:Ear2LN-specificially-expressed-genes.">2) Functional catergory enrichment of Ear1LN:Ear2LN specificially expressed genes.<a class="anchor-link" href="#2)-Functional-catergory-enrichment-of-Ear1LN:Ear2LN-specificially-expressed-genes.">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -12049,7 +12123,6 @@ Figure 5.  Ear1LN:Ear2LN specificially expressed genes identification.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre>bash /psc/home/ydsun/lixuexian/script/category_enrich.sh /psc/home/ydsun/lixuexian/process/lnspecific _lnspecific
-bash /psc/home/ydsun/lixuexian/script/category_detail_specific.sh /psc/home/ydsun/lixuexian/process/lnspecific ear1LN:ear2LN _lnspecific 1-2,6-8,12-14
 </pre></div>
 
 </div>
@@ -12060,8 +12133,8 @@ bash /psc/home/ydsun/lixuexian/script/category_detail_specific.sh /psc/home/ydsu
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig6.png?raw=true" style="width: 800px;" />
-Figure 6. Functional category enrichment of Ear1LN:Ear2LN specificially expressed genes identification.</p>
+<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig9.png?raw=true" style="width: 300px;" />
+Figure 9. Functional category enrichment of Ear1LN:Ear2LN specificially expressed genes identification.</p>
 
 </div>
 </div>
@@ -12071,7 +12144,29 @@ Figure 6. Functional category enrichment of Ear1LN:Ear2LN specificially expresse
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.-GO-enrichment-analysis-of-Ear1LN:Ear2LN-specificially-expressed-genes-with-topgo-package.">4. GO enrichment analysis of Ear1LN:Ear2LN specificially expressed genes with topgo package.<a class="anchor-link" href="#4.-GO-enrichment-analysis-of-Ear1LN:Ear2LN-specificially-expressed-genes-with-topgo-package.">&#182;</a></h3>
+<div class="highlight"><pre>bash /psc/home/ydsun/lixuexian/script/category_detail_specific.sh /psc/home/ydsun/lixuexian/process/lnspecific ear1LN:ear2LN _lnspecific 1-2,6-8,12-14
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig10.png?raw=true" style="width: 800px;" />
+Figure 11. Functional category enrichment genes of Ear1LN:Ear2LN specificially expressed genes.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="3)-GO-enrichment-analysis-of-Ear1LN:Ear2LN-specificially-expressed-genes-with-topgo-package.">3) GO enrichment analysis of Ear1LN:Ear2LN specificially expressed genes with topgo package.<a class="anchor-link" href="#3)-GO-enrichment-analysis-of-Ear1LN:Ear2LN-specificially-expressed-genes-with-topgo-package.">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -12091,8 +12186,8 @@ Figure 6. Functional category enrichment of Ear1LN:Ear2LN specificially expresse
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig5.png?raw=true" style="width: 500px;" />
-Figure 7.  GO enrichment of Ear1LN:Ear2LN specificially expressed genes.</p>
+<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig11.png?raw=true" style="width: 500px;" />
+Figure 11.  GO enrichment of Ear1LN:Ear2LN specificially expressed genes.</p>
 
 </div>
 </div>
@@ -12154,8 +12249,8 @@ bash /psc/home/ydsun/lixuexian/script/category_detail_specific.sh /psc/home/ydsu
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig7.png?raw=true" style="width: 800px;" />
-Figure 8.  Functional category enrichment of nitrate-inducible genes.</p>
+<p><img src="https://github.com/fengkuangbaozha/maize_nitrogen/blob/fig/maize_fig12.png?raw=true" style="width: 800px;" />
+Figure 12.  Functional category enrichment of nitrate-inducible genes.</p>
 
 </div>
 </div>
